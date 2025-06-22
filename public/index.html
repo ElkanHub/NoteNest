@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NoteNest 📝</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="top-bar">
+        <h1>NoteNest 📝</h1>
+        <button id="add-note-btn" class="accent-btn">+ New Note</button>
+      </header>
+
+      <div class="main-content">
+        <aside class="sidebar">
+          <input type="text" placeholder="🔍 Search notes" id="search-box" />
+          <ul class="nav-list">
+            <li>📂 All Notes</li>
+            <li>📌 Pinned</li>
+            <li>🗂️ Categories</li>
+          </ul>
+        </aside>
+
+        <section class="notes-area" id="notes-list">
+          <!-- Notes will be injected here -->
+        </section>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal hidden" id="note-modal">
+      <div class="modal-content">
+        <h2>New Note</h2>
+        <form id="note-form">
+          <input type="text" id="title" placeholder="Note Title" required />
+          <textarea id="body" placeholder="Note Body..." required></textarea>
+          <div class="modal-actions">
+            <button type="submit" class="accent-btn">Save</button>
+            <button type="button" id="close-modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
