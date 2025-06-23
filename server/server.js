@@ -9,8 +9,7 @@ const notesRouter = require("./routers/notes.routes");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGO_URI =
-  process.env.MONGO_URI ||
-  "mongodb+srv://elkanahdonkor:th6WU28nn6ryygeX@learningmongo.oo1584i.mongodb.net/NotesAPI?retryWrites=true&w=majority&appName=LearningMongo";
+  process.env.MONGO_URI;
 
 //middleware
 app.use(express.json());
